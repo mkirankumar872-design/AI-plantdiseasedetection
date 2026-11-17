@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: ai-plantdiseasedetection
+    env: node
+    plan: free
+    region: oregon
+    buildCommand: "echo 'No build required'"
+    startCommand: "node server.js"
+    healthCheckPath: "/api/health"
+    autoDeploy: true
